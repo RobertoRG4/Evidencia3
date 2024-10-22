@@ -1,0 +1,32 @@
+#main {
+  background: url("https://static.nike.com/a/images/t_prod/w_1920,c_limit,f_auto,q_auto/2eca5656-fc3c-4adc-894e-60febb7956c6/pdp.jpg")
+    no-repeat fixed center;
+  background-size: cover;
+}
+.button-class {
+  background-color: #000;
+}
+.button-class:hover {
+  background: #4d4d4d;
+  transition: 0.2s;
+}
+.card-width {
+  width: 400px;
+  margin: 20px;
+}
+.cards-container {
+  margin-top: 50px;
+}
+
+.mt {
+  margin-top: 200px;
+}
+.ft-size {
+  font-size: 80px;
+}
+.height {
+  height: 100vh;
+}
+.h {
+  height: 200px;
+}
