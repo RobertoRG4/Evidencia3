@@ -73,15 +73,16 @@ let data = [
 
 $(document).ready(() => {
   let cardsHtml = "";
-  data.forEach((item) => {
+  data.forEach((item, index) => {
     cardsHtml += `
-      <div class="card text-center m-4 sm" style="width: 18rem">
-        <img src="${item.imgURL}" class="card-img-top" alt="${item.nombre}" />
-        <div class="card-body">
-          <h5 class="card-title">${item.nombre}</h5>
-          <p class="card-text">${item.precio}</p>
-          <button class="btn text-white bg-black p-3 button-class m-4" onclick="window.location.href='producto.html?id=${item.id}'">Ver Producto</button>
-        </div>
+      <div class="card text-center m-4" style="width: 18rem">
+        <a href="producto.html?id=${item.id}" style="text-decoration: none; color: inherit;"> <!-- Hacer toda la tarjeta clickable -->
+          <img src="${item.imgURL}" class="card-img-top" alt="${item.nombre}" />
+          <div class="card-body">
+            <h5 class="card-title">${item.nombre}</h5>
+            <p class="card-text">${item.precio}</p>
+          </div>
+        </a>
       </div>
     `;
   });
