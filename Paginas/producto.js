@@ -32,14 +32,13 @@ const productId = urlParams.get("id");
 const producto = data.find((p) => p.id == productId);
 
 if (producto) {
-  document.getElementById("producto-info").innerHTML = `
+  $("#producto-info").html(`
                 <img src="${producto.imgURL}" alt="${producto.nombre}" style="width: 300px; height: auto;">
                 <h2>${producto.nombre}</h2>
                 <p>Precio: ${producto.precio}</p>
                 <p>${producto.descripcion}</p>
                 <a href="./tienda.html">Volver a la tienda</a>
-            `;
+            `);
 } else {
-  document.getElementById("producto-info").innerHTML =
-    `<p>Producto no encontrado.</p>`;
+  $("#producto-info").html(`<p>Producto no encontrado.</p>`);
 }
