@@ -28,15 +28,50 @@ const data = [
 
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get("id");
+<<<<<<< HEAD
 
 const producto = data.find((p) => p.id == productId);
 
+=======
+const producto = data.find((p) => p.id == productId);
+
+const handleOnClick = () => {
+  let itemCount = parseInt(localStorage.getItem("items") || "0", 10);
+  itemCount++;
+
+  localStorage.setItem("items", itemCount.toString());
+
+  $("#item-count").text(itemCount);
+  console.log("Producto agregado al carrito");
+  $("body").append(`
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1055;">
+      <div id="liveToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body">
+            Producto añadido al carrito con éxito!
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+        </div>
+      </div>
+    </div>
+  `);
+
+  const toastElement = new bootstrap.Toast(
+    document.getElementById("liveToast"),
+  );
+  toastElement.show();
+};
+>>>>>>> main
 if (producto) {
   $("#producto-info").html(`
                 <img src="${producto.imgURL}" alt="${producto.nombre}" style="width: 300px; height: auto;">
                 <h2>${producto.nombre}</h2>
                 <p>Precio: ${producto.precio}</p>
                 <p>${producto.descripcion}</p>
+<<<<<<< HEAD
+=======
+<button onclick="handleOnClick()" class="btn btn-primary">Agregar al carro</button>
+>>>>>>> main
                 <a href="./tienda.html">Volver a la tienda</a>
             `);
 } else {

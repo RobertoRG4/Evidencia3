@@ -1,42 +1,158 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contactanos</title>
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="Paginas/contactanos.css">
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-</head>
-<body>
-    <div class="container mt-5 py-5">
-        <div class="row mb-5">
-            <div class="col-12">
-                <h3>Contactanos</h3>
-            </div>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./carro.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../public/Club.png" alt="Logo" width="150" height="50" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse pe-5" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item active">
+            <a class="nav-link" style="letter-spacing: 2px" href="../index.html"
+              >Inicio</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              style="letter-spacing: 2px"
+              href="../Paginas/tienda.html"
+              >Productos</a
+            >
+          </li>
+          <li class="nav-item active">
+            <a
+              class="nav-link"
+              style="letter-spacing: 2px"
+              href="../Paginas/contactanos.html"
+              >Contactanos</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              style="letter-spacing: 2px"
+              href="../Paginas/blog.html"
+              >Blog</a
+            >
+          </li>
+          <li class="nav-item active">
+            <a id="tienda-item" class="nav-link" style="letter-spacing: 2px">
+              <img src="../public/car.png" style="width: 25px" />
+              <span class="badge text-bg-danger" id="item-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main class="container mt-5 py-5" style="height: 82.5vh">
+      <div class="row mb-5">
+        <div class="col-12">
+          <h3 style="margin-top: -50px">Contactanos</h3>
         </div>
-        <div class="row mb-5">
-            <div class="col-md-6">
-                <form>
-                    <div class="mb-3">
-                        <label for="Name" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="Name">
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Correo electronico</label>
-                        <input type="email" class="form-control" id="email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="opinion" class="form-label">Danos tu opinion</label>
-                        <textarea class="form-control" id="opinion" rows="10" cols="50"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-dark">Enviar</button>
-                </form>
+      </div>
+      <div class="row mb-5">
+        <div class="col-md-6">
+          <form>
+            <div class="mb-3">
+              <label for="Name" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="Name" />
             </div>
-            <div class="col-md-6">
-                <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_394,c_limit/ef09767a-c426-4d02-a280-dfc6ca1fa84c/los-mejores-consejos-para-empezar-a-hacer-running.jpg" alt="Imagen de running" class="img-fluid">
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo electronico</label>
+              <input type="email" class="form-control" id="email" />
             </div>
+            <div class="mb-3">
+              <label for="opinion" class="form-label">Danos tu opinion</label>
+              <textarea
+                class="form-control"
+                id="opinion"
+                rows="10"
+                cols="50"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark">Enviar</button>
+          </form>
         </div>
-    </div>
-</body>
+        <div class="col-md-6">
+          <img
+            src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_394,c_limit/ef09767a-c426-4d02-a280-dfc6ca1fa84c/los-mejores-consejos-para-empezar-a-hacer-running.jpg"
+            alt="Imagen de running"
+            class="img-fluid"
+            style="margin-top: -90px"
+          />
+        </div>
+      </div>
+    </main>
+    <footer class="bg-dark text-white" style="padding: 20px 0">
+      <div class="container">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-md-6">
+            <ul class="navbar-nav d-flex flex-row">
+              <li class="nav-item me-4">
+                <a
+                  class="nav-link text-white"
+                  style="letter-spacing: 2px"
+                  href="../index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item me-4">
+                <a
+                  class="nav-link text-white"
+                  style="letter-spacing: 2px"
+                  href="../Paginas/tienda.html"
+                  >Productos</a
+                >
+              </li>
+              <li class="nav-item me-4">
+                <a
+                  class="nav-link text-white"
+                  style="letter-spacing: 2px"
+                  href="../Paginas/contactanos.html"
+                  >Contáctanos</a
+                >
+              </li>
+              <li class="nav-item me-4">
+                <a
+                  class="nav-link text-white"
+                  style="letter-spacing: 2px"
+                  href="../Paginas/blog.html"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 text-end">
+            <p style="margin: 0; letter-spacing: 1px">
+              Todos los derechos reservados
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
