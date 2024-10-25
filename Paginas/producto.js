@@ -38,6 +38,23 @@ const handleOnClick = () => {
 
   $("#item-count").text(itemCount);
   console.log("Producto agregado al carrito");
+  $("body").append(`
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1055;">
+      <div id="liveToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body">
+            Producto añadido al carrito con éxito!
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+        </div>
+      </div>
+    </div>
+  `);
+
+  const toastElement = new bootstrap.Toast(
+    document.getElementById("liveToast"),
+  );
+  toastElement.show();
 };
 if (producto) {
   $("#producto-info").html(`
