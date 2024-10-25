@@ -28,11 +28,6 @@ const data = [
 
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get("id");
-<<<<<<< HEAD
-
-const producto = data.find((p) => p.id == productId);
-
-=======
 const producto = data.find((p) => p.id == productId);
 
 const handleOnClick = () => {
@@ -61,17 +56,13 @@ const handleOnClick = () => {
   );
   toastElement.show();
 };
->>>>>>> main
 if (producto) {
   $("#producto-info").html(`
                 <img src="${producto.imgURL}" alt="${producto.nombre}" style="width: 300px; height: auto;">
                 <h2>${producto.nombre}</h2>
                 <p>Precio: ${producto.precio}</p>
                 <p>${producto.descripcion}</p>
-<<<<<<< HEAD
-=======
 <button onclick="handleOnClick()" class="btn btn-primary">Agregar al carro</button>
->>>>>>> main
                 <a href="./tienda.html">Volver a la tienda</a>
             `);
 } else {
