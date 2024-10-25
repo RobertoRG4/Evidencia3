@@ -28,15 +28,24 @@ const data = [
 
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get("id");
-
 const producto = data.find((p) => p.id == productId);
 
+const handleOnClick = () => {
+  let itemCount = parseInt(localStorage.getItem("items") || "0", 10);
+  itemCount++;
+
+  localStorage.setItem("items", itemCount.toString());
+
+  $("#item-count").text(itemCount);
+  console.log("Producto agregado al carrito");
+};
 if (producto) {
   $("#producto-info").html(`
                 <img src="${producto.imgURL}" alt="${producto.nombre}" style="width: 300px; height: auto;">
                 <h2>${producto.nombre}</h2>
                 <p>Precio: ${producto.precio}</p>
                 <p>${producto.descripcion}</p>
+<button onclick="handleOnClick()" class="btn btn-primary">Agregar al carro</button>
                 <a href="./tienda.html">Volver a la tienda</a>
             `);
 } else {

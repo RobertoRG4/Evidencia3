@@ -9,6 +9,8 @@
       href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./carro.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -29,7 +31,7 @@
       <div class="collapse navbar-collapse pe-5" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item active">
-            <a class="nav-link" style="letter-spacing: 2px" href="./index.html"
+            <a class="nav-link" style="letter-spacing: 2px" href="../index.html"
               >Inicio</a
             >
           </li>
@@ -37,7 +39,7 @@
             <a
               class="nav-link"
               style="letter-spacing: 2px"
-              href="./Paginas/tienda.html"
+              href="../Paginas/tienda.html"
               >Productos</a
             >
           </li>
@@ -56,6 +58,12 @@
               href="../Paginas/blog.html"
               >Blog</a
             >
+          </li>
+          <li class="nav-item active">
+            <a id="tienda-item" class="nav-link" style="letter-spacing: 2px">
+              <img src="../public/car.png" style="width: 25px" />
+              <span class="badge text-bg-danger" id="item-count">0</span>
+            </a>
           </li>
         </ul>
       </div>
@@ -173,4 +181,3 @@
     </footer>
   </body>
 </html>
-
