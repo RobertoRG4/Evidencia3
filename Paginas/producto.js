@@ -154,12 +154,12 @@ if (producto) {
                         <label class="btn btn-outline-dark btn-sm w-100" for="CM_29">CM 29</label>
                     </div>
                 </div>
-                <div class="row mt-5">
+                <div class="row mt-5 d-flex align-items-center justify-content-center">
                     <div class="col-4">
                         <a href="./tienda.html" class="btn btn-dark w-70">Regresar a la tienda</a>
                     </div>
                     <div class="col-4">
-                        <a href="./carro-de-compras.html" class="btn btn-dark w-70">Agregar a carrito</a>
+                        <button class="btn bg-dark text-white" onclick="handleOnClick()">Agregar al carro</button>
                     </div>
                 </div>
             </div>
