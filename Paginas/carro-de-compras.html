@@ -2,15 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Carrito de compras</title>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <link
       rel="stylesheet"
       href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./carro.js"></script>
+    <script src="./render-productos.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -60,12 +61,7 @@
             >
           </li>
           <li class="nav-item active">
-            <a
-              id="tienda-item"
-              href="./carro-de-compras.html"
-              class="nav-link"
-              style="letter-spacing: 2px"
-            >
+            <a id="tienda-item" class="nav-link" style="letter-spacing: 2px">
               <img src="../public/car.png" style="width: 25px" />
               <span class="badge text-bg-danger" id="item-count">0</span>
             </a>
@@ -73,70 +69,7 @@
         </ul>
       </div>
     </nav>
-    <main class="container py-5" >
-      <div class="row">
-        <h3 class="mb-4">Blog</h3>
-        <h2 class="text-center">
-          <b
-            >Nike para Corredores en Pareja – Comodidad, Durabilidad y
-            Rendimiento</b
-          >
-        </h2>
-      </div>
-      <div class="row mt-5 mb-3">
-        <b>Diseño y ajuste</b>
-        <p>
-          La estética es atractiva y moderna, pero el ajuste es lo más
-          importante para mí. En mi experiencia como corredor en pareja,
-          necesito un calzado que se ajuste bien desde el primer uso, sin
-          requerir un largo periodo de adaptación. Quiero que ambos podamos
-          tener la misma experiencia de ajuste sin molestias en diferentes
-          distancias.
-        </p>
-      </div>
-      <div class="row mb-3">
-        <b>Comodidad y amortiguación</b>
-        <p>
-          Valoro mucho una amortiguación que absorba bien los impactos, ya que
-          las salidas en pareja suelen incluir distancias largas o medias. Si
-          bien la amortiguación Nike React o ZoomX puede ser efectiva, he
-          encontrado que en algunos modelos se siente demasiado suave, lo que
-          puede ser ideal para personas que busquen carreras suaves, pero no tan
-          eficaz para quienes quieren mayor respuesta en sus zancadas.
-        </p>
-      </div>
-      <div class="row mb-3">
-        <b>Estabilidad y soporte</b>
-        <p>
-          Es importante que ambos podamos sentir estabilidad, especialmente en
-          caminos irregulares. Algunos modelos Nike ofrecen buen soporte, pero
-          otros pueden sentirse inestables en terrenos más complicados. Si vas a
-          compartir el mismo modelo con tu pareja, es clave que ambos sientan
-          confianza al correr, evitando el riesgo de torceduras.
-        </p>
-      </div>
-      <div class="row mb-3">
-        <b>Durabilidad</b>
-        <p>
-          Algo que me preocupa a largo plazo es la durabilidad. Al correr en
-          pareja, solemos ser más constantes y hacemos más kilómetros juntos, lo
-          que significa que los tenis se desgastan más rápido. En algunos
-          modelos Nike, he visto que la suela puede empezar a desgastarse antes
-          de lo esperado, especialmente en la parte media, lo que comprometería
-          la tracción.
-        </p>
-      </div>
-      <div class="row mb-3">
-        <b>Conclusión</b>
-        <p>
-          Si corres en pareja y buscas unos tenis Nike, prioriza modelos con
-          amortiguación reactiva, buen ajuste y soporte lateral. Consideraría
-          modelos como los Nike Pegasus o Nike Zoom Fly para un balance adecuado
-          entre comodidad y rendimiento, aunque puede que quieras algo más
-          técnico si buscas durabilidad en carreras de larga distancia.
-        </p>
-      </div>
-    </main>
+    <main id="render-productos"></main>
     <footer class="bg-dark text-white" style="padding: 20px 0">
       <div class="container">
         <div class="row justify-content-between align-items-center">

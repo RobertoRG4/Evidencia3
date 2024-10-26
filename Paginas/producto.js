@@ -110,7 +110,7 @@ if (producto) {
                         <a href="./tienda.html" class="btn btn-dark w-70">Regresar a la tienda</a>
                     </div>
                     <div class="col-4">
-                        <a href="" class="btn btn-dark w-70">Agregar a carrito</a>
+                        <a href="./carro-de-compras.html" class="btn btn-dark w-70">Agregar a carrito</a>
                     </div>
                 </div>
             </div>
