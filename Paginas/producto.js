@@ -67,7 +67,7 @@ if (producto) {
                 <p class="text-danger">Sustainable materials</p>
                 <h1 class="mb-5"><b>${producto.nombre}</b></h1>
                 <p class="mb-3">${producto.precio}</p>
-                <p class="mb-5">${producto.descripcion}</p>
+                <p class="mb-5">"${producto.descripcion}"</p>
                 <p class="mb-5">Selecciona tu talla</p>
                 <div class="row g-1 mb-2">
                     <div class="col-3">
