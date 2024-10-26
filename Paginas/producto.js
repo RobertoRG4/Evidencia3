@@ -12,7 +12,7 @@ const data = [
     nombre: "Adidas Ultraboost",
     precio: "$2,499",
     imgURL:
-      "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,pg_1/6cbd82fd2f1947cc9058ab7c0127d9bc_9366/Ultraboost_21_Shoes_White_GZ2573_01_standard.jpg",
+      "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/6e2c11db-1b66-4f12-9395-5d8235603da9/W+NIKE+VOMERO+17.png",
     descripcion:
       "Zapatos de alto rendimiento que proporcionan energía en cada paso.",
   },
@@ -21,7 +21,7 @@ const data = [
     nombre: "Puma RS-X",
     precio: "$1,899",
     imgURL:
-      "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb,f_auto,h_1000,w_1000/global/385747/01/modif/compos/6_01.jpg",
+      "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/748f8a26-e20b-4e0c-95e4-a5b513c97e9a/NIKE+AIR+ZOOM+ARCADIA+2+%28GS%29.png",
     descripcion: "Un diseño llamativo y una amortiguación excepcional.",
   },
   {
@@ -30,6 +30,7 @@ const data = [
     precio: "$4,199",
     imgURL:
       "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a8a36278-bdd7-47d6-9e6c-201d3e0820bb/PEGASUS+PLUS.png",
+      descripcion:""
   },
   {
     id: 5,
@@ -114,9 +115,9 @@ if (producto) {
             </div>
             <div class="col-12 col-md-6">
                 <p class="text-danger">Sustainable materials</p>
-                <h1 class="mb-5"><b>${producto.nombre}</b></h1>
-                <p class="mb-3">${producto.precio}</p>
-                <p class="mb-5">"${producto.descripcion}"</p>
+                <h1 class="mb-2"><b>${producto.nombre}</b></h1>
+                <p class="mb-4">"${producto.descripcion}"</p>
+                <p class="mb-5">${producto.precio}</p>
                 <p class="mb-5">Selecciona tu talla</p>
                 <div class="row g-1 mb-2">
                     <div class="col-3">
