@@ -1,166 +1,210 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Comprar</title>
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./carro.js"></script>
     <script src="./comprar.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="../index.html">
-          <img src="../public/Club.png" alt="Logo" width="150" height="50" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse pe-5" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item active">
-              <a class="nav-link" style="letter-spacing: 2px" href="../index.html"
-                >Inicio</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                style="letter-spacing: 2px"
-                href="../Paginas/tienda.html"
-                >Productos</a
-              >
-            </li>
-            <li class="nav-item active">
-              <a
-                class="nav-link"
-                style="letter-spacing: 2px"
-                href="../Paginas/contactanos.html"
-                >Contactanos</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                style="letter-spacing: 2px"
-                href="../Paginas/blog.html"
-                >Blog</a
-              >
-            </li>
-            <li class="nav-item active">
-              <a
-                id="tienda-item"
-                class="nav-link"
-                href="./carro-de-compras.html"
-                style="letter-spacing: 2px"
-              >
-                <img src="../public/car.png" style="width: 25px" />
-                <span class="badge text-bg-danger" id="item-count">0</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
- <main class="container py-5">
-    <div class="row justify-content-center">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../public/Club.png" alt="Logo" width="150" height="50" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse pe-5" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item active">
+            <a class="nav-link" style="letter-spacing: 2px" href="../index.html"
+              >Inicio</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              style="letter-spacing: 2px"
+              href="../Paginas/tienda.html"
+              >Productos</a
+            >
+          </li>
+          <li class="nav-item active">
+            <a
+              class="nav-link"
+              style="letter-spacing: 2px"
+              href="../Paginas/contactanos.html"
+              >Contactanos</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              style="letter-spacing: 2px"
+              href="../Paginas/blog.html"
+              >Blog</a
+            >
+          </li>
+          <li class="nav-item active">
+            <a
+              id="tienda-item"
+              class="nav-link"
+              href="./carro-de-compras.html"
+              style="letter-spacing: 2px"
+            >
+              <img src="../public/car.png" style="width: 25px" />
+              <span class="badge text-bg-danger" id="item-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main class="container py-5">
+      <div class="row justify-content-center">
         <div class="col-md-6">
-            <h2 class="mb-4 text-center">Formulario de Pago</h2>
-            <form id="form-compra">
-                <div class="mb-3">
-                    <label for="email" class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
-                </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
-                </div>
-                <div class="mb-3">
-                    <label for="card-type" class="form-label">Tipo de tarjeta</label>
-                    <select class="form-select" id="card-type" required>
-                        <option value="" disabled selected>Selecciona tu tarjeta</option>
-                        <option value="Visa">Visa</option>
-                        <option value="MasterCard">MasterCard</option>
-                        <option value="American Express">American Express</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="card-number" class="form-label">Número de tarjeta</label>
-                    <input type="text" class="form-control" id="card-number" placeholder="XXXX XXXX XXXX XXXX" required>
-                </div>
-                <div class="mb-3">
-                    <label for="card-cvv" class="form-label">Código de seguridad (CVV)</label>
-                    <input type="text" class="form-control" id="card-cvv" placeholder="XXX" maxlength="3" required>
-                </div>
+          <h2 class="mb-4 text-center">Formulario de Pago</h2>
+          <form id="form-compra">
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo electrónico</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="nombre@ejemplo.com"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Contraseña</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="Contraseña"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="card-type" class="form-label">Tipo de tarjeta</label>
+              <select class="form-select" id="card-type" required>
+                <option value="" disabled selected>
+                  Selecciona tu tarjeta
+                </option>
+                <option value="Visa">Visa</option>
+                <option value="MasterCard">MasterCard</option>
+                <option value="American Express">American Express</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="card-number" class="form-label"
+                >Número de tarjeta</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="card-number"
+                placeholder="XXXX XXXX XXXX XXXX"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="card-cvv" class="form-label"
+                >Código de seguridad (CVV)</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="card-cvv"
+                placeholder="XXX"
+                maxlength="3"
+                required
+              />
+            </div>
 
-                <button type="submit" class="btn btn-dark w-100" id="boton-comprar">Comprar</button>
-            </form>
-        </div>
-    </div>
-    <div id="compra-exitosa" class="d-none position-fixed top-50 start-50 translate-middle card text-center" 
-         style="width: 18rem; z-index: 1000;">
-        <div class="card-body bg-dark text-light">
-            <h5 class="card-title">¡Compra Exitosa!</h5>
-            <img src="https://i.pinimg.com/originals/fc/8a/3a/fc8a3adb3ef0a19a5bc2681be9235d16.png" alt="Palomita verde" class="my-3" style="width: 50px;">
-            <p class="card-text">Gracias por tu compra.</p>
-        </div>
-    </div>
- </main>
- <footer class="bg-dark text-white mt-5" style="padding: 20px 0">
-    <div class="container">
-      <div class="row justify-content-between align-items-center">
-        <div class="col-md-6">
-          <ul class="navbar-nav d-flex flex-row">
-            <li class="nav-item me-4">
-              <a
-                class="nav-link text-white"
-                style="letter-spacing: 2px"
-                href="../index.html"
-                >Inicio</a
-              >
-            </li>
-            <li class="nav-item me-4">
-              <a
-                class="nav-link text-white"
-                style="letter-spacing: 2px"
-                href="../Paginas/tienda.html"
-                >Productos</a
-              >
-            </li>
-            <li class="nav-item me-4">
-              <a
-                class="nav-link text-white"
-                style="letter-spacing: 2px"
-                href="../Paginas/contactanos.html"
-                >Contáctanos</a
-              >
-            </li>
-            <li class="nav-item me-4">
-              <a
-                class="nav-link text-white"
-                style="letter-spacing: 2px"
-                href="../Paginas/blog.html"
-                >Blog</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-6 text-end">
-          <p style="margin: 0; letter-spacing: 1px">
-            Todos los derechos reservados
-          </p>
+            <button type="submit" class="btn btn-dark w-100" id="boton-comprar">
+              Comprar
+            </button>
+          </form>
         </div>
       </div>
-    </div>
-  </footer>
-</body>
+      <div
+        id="compra-exitosa"
+        class="d-none position-fixed top-50 start-50 translate-middle card text-center"
+        style="width: 18rem; z-index: 1000"
+      >
+        <div class="card-body bg-dark text-light">
+          <h5 class="card-title">¡Compra Exitosa!</h5>
+          <img
+            src="https://i.pinimg.com/originals/fc/8a/3a/fc8a3adb3ef0a19a5bc2681be9235d16.png"
+            alt="Palomita verde"
+            class="my-3"
+            style="width: 50px"
+          />
+          <p class="card-text">Gracias por tu compra.</p>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-dark text-white mt-5" style="padding: 20px 0">
+      <div class="container">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-md-6">
+            <ul class="navbar-nav d-flex flex-row">
+              <li class="nav-item me-4">
+                <a
+                  class="nav-link text-white"
+                  style="letter-spacing: 2px"
+                  href="../index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item me-4">
+                <a
+                  class="nav-link text-white"
+                  style="letter-spacing: 2px"
+                  href="../Paginas/tienda.html"
+                  >Productos</a
+                >
+              </li>
+              <li class="nav-item me-4">
+                <a
+                  class="nav-link text-white"
+                  style="letter-spacing: 2px"
+                  href="../Paginas/contactanos.html"
+                  >Contáctanos</a
+                >
+              </li>
+              <li class="nav-item me-4">
+                <a
+                  class="nav-link text-white"
+                  style="letter-spacing: 2px"
+                  href="../Paginas/blog.html"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 text-end">
+            <p style="margin: 0; letter-spacing: 1px">
+              Todos los derechos reservados
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
