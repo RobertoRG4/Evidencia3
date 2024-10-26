@@ -24,6 +24,55 @@ const data = [
       "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb,f_auto,h_1000,w_1000/global/385747/01/modif/compos/6_01.jpg",
     descripcion: "Un diseño llamativo y una amortiguación excepcional.",
   },
+  {
+    id: 4,
+    nombre: "Nike Pegasus Plus",
+    precio: "$4,199",
+    imgURL:
+      "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a8a36278-bdd7-47d6-9e6c-201d3e0820bb/PEGASUS+PLUS.png",
+  },
+  {
+    id: 5,
+    nombre: "Nike Rival Fly 4",
+    precio: "$2,399",
+    imgURL:
+      "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/86a9258e-acac-4ea5-942d-c65614109c1b/NIKE+AIR+ZOOM+RIVAL+FLY+4.png",
+  },
+  {
+    id: 6,
+    nombre: "Jordan Heir 'Bloodline'",
+    precio: "$2,699",
+    imgURL:
+      "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/f082446b-4aed-40cd-b4b3-b8ccccd90c66/JORDAN+HEIR.png",
+  },
+  {
+    id: 7,
+    nombre: "Air Jordan 1 Low SE",
+    precio: "$3,249",
+    imgURL:
+      "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1c897d92-a0ce-488e-bb2a-5e7e766d7614/AIR+JORDAN+1+LOW+SE.png",
+  },
+  {
+    id: 8,
+    nombre: "Air Jordan Dub Zero",
+    precio: "$3,999",
+    imgURL:
+      "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/c264faee-3451-4d38-963f-e224782fbb42/AIR+JORDAN+DUB+ZERO.png",
+  },
+  {
+    id: 9,
+    nombre: "Air Jordan 1 Zoom CMFT 2",
+    precio: "$3,599",
+    imgURL:
+      "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/4d6e54aa-7104-47c6-8777-3d838d6980b3/AIR+JORDAN+1+ZM+AIR+CMFT+2.png",
+  },
+  {
+    id: 10,
+    nombre: "Air Jordan 1 Mid",
+    precio: "$3,199",
+    imgURL:
+      "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/9921d678-ed65-49c6-bdcb-e85bebeb7c46/AIR+JORDAN+1+MID.png",
+  },
 ];
 
 const urlParams = new URLSearchParams(window.location.search);
