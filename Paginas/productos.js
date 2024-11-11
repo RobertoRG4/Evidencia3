@@ -76,7 +76,7 @@ $(document).ready(() => {
   data.forEach((item, index) => {
     cardsHtml += `
       <div class="card text-center m-4" style="width: 18rem">
-        <a href="producto.html?id=${item.id}" style="text-decoration: none; color: inherit;"> <!-- Hacer toda la tarjeta clickable -->
+        <a href="producto.html?id=${item.id}" style="text-decoration: none; color: inherit;">
           <img src="${item.imgURL}" class="card-img-top" alt="${item.nombre}" />
           <div class="card-body">
             <h5 class="card-title">${item.nombre}</h5>
