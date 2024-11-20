@@ -1,7 +1,7 @@
-import { dataDescripcion } from "../informacion";
+import { productos } from "../informacion";
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get("id");
-const producto = dataDescripcion.find((p) => p.id == productId);
+const producto = productos.find((p) => p.id == productId);
 
 const handleOnClick = () => {
   let itemCount = parseInt(localStorage.getItem("items") || "0", 10);
@@ -103,4 +103,3 @@ if (producto) {
 } else {
   $("#producto-info").html(`<p>Producto no encontrado.</p>`);
 }
-

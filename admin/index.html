@@ -4,27 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Panel de administracion</title>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
     <div>
-      <h1>Panel de administracion</h1>
+      <h1 class="text-center pt-4 pb-4 text-primary">
+        Panel de administracion
+      </h1>
       <div>
-        <h2>Informacion del los articulos del inicio</h2>
-        <table>
+        <h2 class="text-center">Informacion del los articulos del inicio</h2>
+        <table
+          class="table d-flex align-items-center justify-content-center flex-column"
+        >
           <thead>
             <tr>
               <th>ID</th>
               <th>Nombre</th>
               <th>URL</th>
               <th>Precio</th>
+              <th>Opciones</th>
             </tr>
           </thead>
           <tbody id="itemsHome"></tbody>
         </table>
+        <p class="text-center text-info">Numero Maximo y Minimo es de 4</p>
       </div>
-      <div>
-        <h2>Informacion del los articulos de la Tienda</h2>
-        <table>
+      <div class="mb-5">
+        <h2 class="text-center mt-5">
+          Informacion del los articulos de la Tienda
+        </h2>
+        <table
+          class="table d-flex align-items-center justify-content-center flex-column"
+        >
           <thead>
             <tr>
               <th>ID</th>
@@ -35,21 +53,32 @@
           </thead>
           <tbody id="itemsProductos"></tbody>
         </table>
+        <div class="d-flex justify-content-center align-items-center mb-5">
+          <button class="btn btn-warning" id="agregar">Agregar</button>
+        </div>
       </div>
-      <div>
-        <h2>Informacion del los productos de manera individual</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Nombre</th>
-              <th>URL</th>
-              <th>Precio</th>
-              <th>Descripcion</th>
-            </tr>
-          </thead>
-          <tbody id="itemsDescripcion"></tbody>
-        </table>
+    </div>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div
+        id="liveToast"
+        class="toast bg-danger"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="toast-header bg-warning">
+          <strong class="me-auto">Ops, no has rellenado los campos.</strong>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="toast-body text-white">
+          Asegúrate que antes de crear otro item, hayas rellenado los campos
+          anteriores.
+        </div>
       </div>
     </div>
     <script src="./main.js" type="module"></script>
