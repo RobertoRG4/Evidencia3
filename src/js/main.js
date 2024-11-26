@@ -1,4 +1,6 @@
-import { dataHome } from "./informacion";
+import { dataHome } from "../data/informacion";
+import $ from "jquery";
+import "bootstrap";
 $(document).ready(() => {
   let cards = "";
   dataHome.forEach((item, index) => {

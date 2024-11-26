@@ -1,3 +1,5 @@
+import $ from "jquery";
+import "bootstrap";
 $(document).ready(() => {
   const actualizarItemCount = () => {
     let itemCount = localStorage.getItem("items") || 0;

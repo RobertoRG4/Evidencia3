@@ -1,21 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contactanos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Carrito de compras</title>
     <link
       rel="stylesheet"
-      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+      href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="./carro.js"></script>
+    <script src="/src/js/index.js" type="module"></script>
+    <script src="/src/pages/tienda/js/carro.js" type="module"></script>
+    <script
+      src="/src/pages/carro/js/render-productos.js"
+      type="module"
+    ></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="../index.html">
-        <img src="../public/Club.png" alt="Logo" width="150" height="50" />
+      <a class="navbar-brand" href="/">
+        <img src="/public/club.png" alt="Logo" width="150" height="50" />
       </a>
       <button
         class="navbar-toggler"
@@ -31,15 +34,13 @@
       <div class="collapse navbar-collapse pe-5" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item active">
-            <a class="nav-link" style="letter-spacing: 2px" href="../index.html"
-              >Inicio</a
-            >
+            <a class="nav-link" style="letter-spacing: 2px" href="/">Inicio</a>
           </li>
           <li class="nav-item">
             <a
               class="nav-link"
               style="letter-spacing: 2px"
-              href="../Paginas/tienda.html"
+              href="/src/pages/tienda/index.html"
               >Productos</a
             >
           </li>
@@ -47,7 +48,7 @@
             <a
               class="nav-link"
               style="letter-spacing: 2px"
-              href="../Paginas/contactanos.html"
+              href="/src/pages/contactanos/index.html"
               >Contactanos</a
             >
           </li>
@@ -55,64 +56,21 @@
             <a
               class="nav-link"
               style="letter-spacing: 2px"
-              href="../Paginas/blog.html"
+              href="/src/pages/blog/index.html"
               >Blog</a
             >
           </li>
           <li class="nav-item active">
-            <a
-              id="tienda-item"
-              class="nav-link"
-              href="./carro-de-compras.html"
-              style="letter-spacing: 2px"
-            >
-              <img src="../public/car.png" style="width: 25px" />
+            <a id="tienda-item" class="nav-link" style="letter-spacing: 2px">
+              <img src="/public/car.png" style="width: 25px" />
               <span class="badge text-bg-danger" id="item-count">0</span>
             </a>
           </li>
         </ul>
       </div>
     </nav>
-    <main class="container mt-5 py-5" style="height: 82.5vh">
-      <div class="row mb-5">
-        <div class="col-12">
-          <h3 style="margin-top: -50px">Contactanos</h3>
-        </div>
-      </div>
-      <div class="row mb-5">
-        <div class="col-md-6">
-          <form>
-            <div class="mb-3">
-              <label for="Name" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="Name" />
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Correo electronico</label>
-              <input type="email" class="form-control" id="email" />
-            </div>
-            <div class="mb-3">
-              <label for="opinion" class="form-label">Danos tu opinion</label>
-              <textarea
-                class="form-control"
-                id="opinion"
-                rows="10"
-                cols="50"
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn-dark">Enviar</button>
-          </form>
-        </div>
-        <div class="col-md-6">
-          <img
-            src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_394,c_limit/ef09767a-c426-4d02-a280-dfc6ca1fa84c/los-mejores-consejos-para-empezar-a-hacer-running.jpg"
-            alt="Imagen de running"
-            class="img-fluid"
-            style="margin-top: -90px"
-          />
-        </div>
-      </div>
-    </main>
-    <footer class="bg-dark text-white" style="padding: 20px 0">
+    <main class="container py-5 mb-5" id="render-productos"></main>
+    <footer class="bg-dark text-white mt-5" style="padding: 20px 0">
       <div class="container">
         <div class="row justify-content-between align-items-center">
           <div class="col-md-6">
@@ -121,7 +79,7 @@
                 <a
                   class="nav-link text-white"
                   style="letter-spacing: 2px"
-                  href="../index.html"
+                  href="/"
                   >Inicio</a
                 >
               </li>
@@ -129,7 +87,7 @@
                 <a
                   class="nav-link text-white"
                   style="letter-spacing: 2px"
-                  href="../Paginas/tienda.html"
+                  href="/src/pages/tienda/index.html"
                   >Productos</a
                 >
               </li>
@@ -137,7 +95,7 @@
                 <a
                   class="nav-link text-white"
                   style="letter-spacing: 2px"
-                  href="../Paginas/contactanos.html"
+                  href="/src/pages/contactanos/index.html"
                   >Contáctanos</a
                 >
               </li>
@@ -145,7 +103,7 @@
                 <a
                   class="nav-link text-white"
                   style="letter-spacing: 2px"
-                  href="../Paginas/blog.html"
+                  href="/src/pages/blog/"
                   >Blog</a
                 >
               </li>

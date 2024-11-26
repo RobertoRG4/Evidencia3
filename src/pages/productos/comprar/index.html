@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,17 +6,19 @@
     <title>Comprar</title>
     <link
       rel="stylesheet"
-      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+      href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="./carro.js"></script>
-    <script src="./comprar.js"></script>
+    <script src="/src/js/index.js" type="module"></script>
+    <script src="/src/pages/tienda/js/carro.js" type="module"></script>
+    <script
+      src="/src/pages/productos/comprar/js/comprar.js"
+      type="module"
+    ></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="../index.html">
-        <img src="../public/Club.png" alt="Logo" width="150" height="50" />
+      <a class="navbar-brand" href="/">
+        <img src="/public/club.png" alt="Logo" width="150" height="50" />
       </a>
       <button
         class="navbar-toggler"
@@ -32,15 +34,13 @@
       <div class="collapse navbar-collapse pe-5" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item active">
-            <a class="nav-link" style="letter-spacing: 2px" href="../index.html"
-              >Inicio</a
-            >
+            <a class="nav-link" style="letter-spacing: 2px" href="/">Inicio</a>
           </li>
           <li class="nav-item">
             <a
               class="nav-link"
               style="letter-spacing: 2px"
-              href="../Paginas/tienda.html"
+              href="/src/pages/tienda/index.html"
               >Productos</a
             >
           </li>
@@ -48,7 +48,7 @@
             <a
               class="nav-link"
               style="letter-spacing: 2px"
-              href="../Paginas/contactanos.html"
+              href="/src/pages/contactanos/index.html"
               >Contactanos</a
             >
           </li>
@@ -56,7 +56,7 @@
             <a
               class="nav-link"
               style="letter-spacing: 2px"
-              href="../Paginas/blog.html"
+              href="/src/pages/blog/index.html"
               >Blog</a
             >
           </li>
@@ -64,10 +64,10 @@
             <a
               id="tienda-item"
               class="nav-link"
-              href="./carro-de-compras.html"
+              href="/src/pages/carro/index.html"
               style="letter-spacing: 2px"
             >
-              <img src="../public/car.png" style="width: 25px" />
+              <img src="/public/car.png" style="width: 25px" />
               <span class="badge text-bg-danger" id="item-count">0</span>
             </a>
           </li>
@@ -168,7 +168,7 @@
                 <a
                   class="nav-link text-white"
                   style="letter-spacing: 2px"
-                  href="../index.html"
+                  href="/"
                   >Inicio</a
                 >
               </li>
@@ -176,7 +176,7 @@
                 <a
                   class="nav-link text-white"
                   style="letter-spacing: 2px"
-                  href="../Paginas/tienda.html"
+                  href="/src/pages/tienda/index.html"
                   >Productos</a
                 >
               </li>
@@ -184,7 +184,7 @@
                 <a
                   class="nav-link text-white"
                   style="letter-spacing: 2px"
-                  href="../Paginas/contactanos.html"
+                  href="/src/pages/contactanos/index.html"
                   >Contáctanos</a
                 >
               </li>
@@ -192,7 +192,7 @@
                 <a
                   class="nav-link text-white"
                   style="letter-spacing: 2px"
-                  href="../Paginas/blog.html"
+                  href="/src/pages/blog/index.html"
                   >Blog</a
                 >
               </li>

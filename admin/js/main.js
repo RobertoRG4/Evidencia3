@@ -1,4 +1,6 @@
-import { productos, dataHome } from "../informacion.js";
+import { productos, dataHome } from "@/data/informacion.js";
+import $ from "jquery";
+import "bootstrap";
 
 const $renderizadoItemsHome = document.getElementById("itemsHome");
 const $renderizadoItemsProductos = document.getElementById("itemsProductos");
@@ -9,19 +11,27 @@ const crearFilaProducto = (producto) => `
     <td style="width:50px">${producto.id}</td>
     <td style="width:250px">
       <span class="span span-nombre">${producto.nombre}</span>
-      <input class="input input-nombre" type="hidden" value="${producto.nombre}" />
+      <input class="input input-nombre" type="hidden" value="${
+        producto.nombre
+      }" />
     </td>
     <td style="width:500px">
       <span class="span span-url">${producto.imgURL || producto.url}</span>
-      <input class="input input-url" type="hidden" value="${producto.imgURL || producto.url}" />
+      <input class="input input-url" type="hidden" value="${
+        producto.imgURL || producto.url
+      }" />
     </td>
     <td style="width:120px">
       <span class="span span-precio">${producto.precio}</span>
-      <input class="input input-precio" type="hidden" value="${producto.precio}" />
+      <input class="input input-precio" type="hidden" value="${
+        producto.precio
+      }" />
     </td>
     <td>
       <span class="span span-descripcion">${producto.descripcion || ""}</span>
-      <input class="input input-descripcion" type="hidden" value="${producto.descripcion || ""}" />
+      <input class="input input-descripcion" type="hidden" value="${
+        producto.descripcion || ""
+      }" />
     </td>
     <td><button class="editar btn btn-primary">Editar</button></td>
     <td><button class="eliminar btn btn-danger">Eliminar</button></td>
@@ -115,7 +125,7 @@ $(document).on("click", "[id^=agregar-confirmar-]", function () {
 
   productos.push({ id, nombre, imgURL: url, precio, descripcion });
   $row.replaceWith(
-    crearFilaProducto({ id, nombre, imgURL: url, precio, descripcion }),
+    crearFilaProducto({ id, nombre, imgURL: url, precio, descripcion })
   );
   status = true;
 });

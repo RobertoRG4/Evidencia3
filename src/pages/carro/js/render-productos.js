@@ -1,10 +1,11 @@
+import $ from "jquery";
 $(document).ready(() => {
   const renderProductos = () => {
     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
     if (carrito.length === 0) {
       $("#render-productos").html(
-        `<div class="container d-flex align-items-center justify-content-center" style="height:80vh;">No hay productos en la canasta</div>`,
+        `<div class="container d-flex align-items-center justify-content-center" style="height:80vh;">No hay productos en la canasta</div>`
       );
       return;
     }
@@ -17,7 +18,9 @@ $(document).ready(() => {
     carrito.forEach((producto) => {
       productosHTML += `
         <div class="d-flex justify-content-center align-items-center border-bottom py-3">
-          <img src="${producto.imgURL}" class="card-img" style="width:150px" alt="${producto.nombre}">
+          <img src="${
+            producto.imgURL
+          }" class="card-img" style="width:150px" alt="${producto.nombre}">
           <div class="m-4">
             <h5 class="card-title">${producto.nombre}</h5>
             <p class="card-text">${producto.descripcion}</p>
@@ -27,12 +30,18 @@ $(document).ready(() => {
             <p class="m-4">Cantidad</p>
             <p id="cantidad-${producto.id}">${producto.cantidad || 1}</p>
             <div>
-              <button data-id="${producto.id}" class="btn-sumar btn btn-secondary">+</button>
-              <button data-id="${producto.id}" class="btn-restar btn btn-secondary">-</button>
+              <button data-id="${
+                producto.id
+              }" class="btn-sumar btn btn-secondary">+</button>
+              <button data-id="${
+                producto.id
+              }" class="btn-restar btn btn-secondary">-</button>
             </div>
           </div>
           <div class="d-flex align-items-center justify-content-center">
-            <button onclick="localStorage.clear()" data-id="${producto.id}" class="btn-eliminar btn btn-danger">Eliminar</button>
+            <button onclick="localStorage.clear()" data-id="${
+              producto.id
+            }" class="btn-eliminar btn btn-danger">Eliminar</button>
           </div>
         </div>`;
     });

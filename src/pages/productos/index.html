@@ -1,22 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detalles del Producto</title>
     <link
-      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+      href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="./carro.js"></script>
+    <script src="/src/js/index.js"></script>
+    <script src="/src/pages/tienda/js/carro.js"></script>
   </head>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="../index.html">
-          <img src="../public/Club.png" alt="Logo" width="150" height="50" />
+        <a class="navbar-brand" href="/">
+          <img src="/public/club.png" alt="Logo" width="150" height="50" />
         </a>
         <button
           class="navbar-toggler"
@@ -32,10 +31,7 @@
         <div class="collapse navbar-collapse pe-5" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item active">
-              <a
-                class="nav-link"
-                style="letter-spacing: 2px"
-                href="../index.html"
+              <a class="nav-link" style="letter-spacing: 2px" href="/"
                 >Inicio</a
               >
             </li>
@@ -43,7 +39,7 @@
               <a
                 class="nav-link"
                 style="letter-spacing: 2px"
-                href="./tienda.html"
+                href="/src/pages/tienda/index.html"
                 >Productos</a
               >
             </li>
@@ -51,23 +47,26 @@
               <a
                 class="nav-link"
                 style="letter-spacing: 2px"
-                href="./contactanos.html"
+                href="/src/pages/contactanos/index.html"
                 >Contactanos</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="letter-spacing: 2px" href="./blog.html"
+              <a
+                class="nav-link"
+                style="letter-spacing: 2px"
+                href="/src/pages/blog/index.html"
                 >Blog</a
               >
             </li>
             <li class="nav-item active">
               <a
-                href="./carro-de-compras.html"
+                href="/src/pages/carro/index.html"
                 id="tienda-item"
                 class="nav-link"
                 style="letter-spacing: 2px"
               >
-                <img src="../public/car.png" style="width: 25px" />
+                <img src="/public/car.png" style="width: 25px" />
                 <span class="badge text-bg-danger" id="item-count">0</span>
               </a>
             </li>
@@ -86,7 +85,7 @@
                 <a
                   class="nav-link text-white"
                   style="letter-spacing: 2px"
-                  href="../index.html"
+                  href="/"
                   >Inicio</a
                 >
               </li>
@@ -94,7 +93,7 @@
                 <a
                   class="nav-link text-white"
                   style="letter-spacing: 2px"
-                  href="../Paginas/tienda.html"
+                  href="/src/pages/tienda/index.html"
                   >Productos</a
                 >
               </li>
@@ -102,7 +101,7 @@
                 <a
                   class="nav-link text-white"
                   style="letter-spacing: 2px"
-                  href="../Paginas/contactanos.html"
+                  href="/src/pages/contactanos/index.html"
                   >Contáctanos</a
                 >
               </li>
@@ -110,7 +109,7 @@
                 <a
                   class="nav-link text-white"
                   style="letter-spacing: 2px"
-                  href="../Paginas/blog.html"
+                  href="/src/pages/blog/index.html"
                   >Blog</a
                 >
               </li>
@@ -124,6 +123,6 @@
         </div>
       </div>
     </footer>
-    <script src="./producto.js" type="module"></script>
+    <script src="/src/pages/productos/js/producto.js" type="module"></script>
   </body>
 </html>

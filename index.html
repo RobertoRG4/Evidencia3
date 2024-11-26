@@ -1,24 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Evidencia 2</title>
     <link
-      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+      href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./index.css" />
-    <script href="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="./Paginas/carro.js"></script>
+    <link rel="stylesheet" href="/index.css" />
+    <script src="/src/js/index.js" type="module"></script>
+    <script src="/src/pages/tienda/js/carro.js" type="module"></script>
   </head>
   <body>
     <main>
       <section id="main" class="container-fluid height">
         <nav class="navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand" href="./index.html">
-            <img src="./public/Club.png" alt="Logo" width="150" height="50" />
+          <a class="navbar-brand" href="/">
+            <img src="/public/club.png" alt="Logo" width="150" height="50" />
           </a>
           <button
             class="navbar-toggler"
@@ -34,10 +33,7 @@
           <div class="collapse navbar-collapse pe-5" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item active">
-                <a
-                  class="nav-link"
-                  style="letter-spacing: 2px"
-                  href="./index.html"
+                <a class="nav-link" style="letter-spacing: 2px" href="/"
                   >Inicio</a
                 >
               </li>
@@ -45,7 +41,7 @@
                 <a
                   class="nav-link"
                   style="letter-spacing: 2px"
-                  href="./Paginas/tienda.html"
+                  href="/src/pages/tienda/index.html"
                   >Productos</a
                 >
               </li>
@@ -53,7 +49,7 @@
                 <a
                   class="nav-link"
                   style="letter-spacing: 2px"
-                  href="./Paginas/contactanos.html"
+                  href="/src/pages/contactanos/index.html"
                   >Contactanos</a
                 >
               </li>
@@ -61,18 +57,18 @@
                 <a
                   class="nav-link"
                   style="letter-spacing: 2px"
-                  href="./Paginas/blog.html"
+                  href="/src/pages/blog/index.html"
                   >Blog</a
                 >
               </li>
               <li class="nav-item active">
                 <a
-                  href="./Paginas/carro-de-compras.html"
+                  href="/src/pages/carro/index.html"
                   id="tienda-item"
                   class="nav-link"
                   style="letter-spacing: 2px"
                 >
-                  <img src="./public/car.png" style="width: 25px" />
+                  <img src="/public/car.png" style="width: 25px" />
                   <span class="badge text-bg-danger" id="item-count">0</span>
                 </a>
               </li>
@@ -92,7 +88,7 @@
           </div>
           <div id="button" class="text-end mt">
             <button
-              onclick="window.location.href = './Paginas/tienda.html'"
+              onclick="window.location.href = '/src/pages/tienda/index.html'"
               class="btn text-white p-3 button-class"
               style="margin-right: 50px"
             >
@@ -107,7 +103,10 @@
           id="container-main"
           class="d-flex justify-content-center cards-container text-center"
         ></div>
-        <a href="./Paginas/tienda.html" class="btn bg-dark text-white mt-4">
+        <a
+          href="/src/pages/tienda/index.html"
+          class="btn bg-dark text-white mt-4"
+        >
           Ver en Tienda
         </a>
       </section>
@@ -123,7 +122,7 @@
               corredores apasionados!
               <br />
               <button
-                onclick="window.location.href = './Paginas/blog.html'"
+                onclick="window.location.href = '/src/pages/blog/index.html'"
                 class="btn text-white p-3 button-class m-4"
               >
                 Visitar blog
@@ -155,7 +154,7 @@
               productos que realmente marquen la diferencia.!
               <br />
               <button
-                onclick="window.location.href ='./Paginas/contactanos.html'"
+                onclick="window.location.href ='/src/pages/contactanos/index.html'"
                 class="btn text-white p-3 button-class m-4"
               >
                 Compartir mi opinion
@@ -173,7 +172,7 @@
                   <a
                     class="nav-link text-white"
                     style="letter-spacing: 2px"
-                    href="index.html"
+                    href="/"
                     >Inicio</a
                   >
                 </li>
@@ -181,7 +180,7 @@
                   <a
                     class="nav-link text-white"
                     style="letter-spacing: 2px"
-                    href="./Paginas/tienda.html"
+                    href="/src/pages/tienda/index.html"
                     >Productos</a
                   >
                 </li>
@@ -189,7 +188,7 @@
                   <a
                     class="nav-link text-white"
                     style="letter-spacing: 2px"
-                    href="./Paginas/contactanos.html"
+                    href="/src/pages/contactanos/index.html"
                     >Contáctanos</a
                   >
                 </li>
@@ -197,7 +196,7 @@
                   <a
                     class="nav-link text-white"
                     style="letter-spacing: 2px"
-                    href="./Paginas/blog.html"
+                    href="/src/pages/blog/index.html"
                     >Blog</a
                   >
                 </li>
@@ -212,6 +211,6 @@
         </div>
       </footer>
     </main>
-    <script src="./main.js" type="module"></script>
+    <script src="/src/js/main.js" type="module"></script>
   </body>
 </html>
