@@ -1,5 +1,6 @@
 import $ from "jquery";
 import "bootstrap";
+import * as bootstrap from "bootstrap";
 import { productos } from "@/data/informacion";
 
 const urlParams = new URLSearchParams(window.location.search);
@@ -16,11 +17,9 @@ const handleOnClick = () => {
   localStorage.setItem("items", itemCount.toString());
   localStorage.setItem("carrito", JSON.stringify(carrito));
 
-  console.log("Producto agregado al carrito:", producto);
   localStorage.setItem("id", productId);
 
   $("#item-count").text(itemCount);
-  console.log("Producto agregado al carrito");
   $("body").append(`
     <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1055;">
       <div id="liveToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">

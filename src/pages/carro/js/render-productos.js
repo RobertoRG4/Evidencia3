@@ -39,7 +39,7 @@ $(document).ready(() => {
             </div>
           </div>
           <div class="d-flex align-items-center justify-content-center">
-            <button onclick="localStorage.clear()" data-id="${
+            <button data-id="${
               producto.id
             }" class="btn-eliminar btn btn-danger">Eliminar</button>
           </div>
@@ -66,6 +66,9 @@ $(document).ready(() => {
 
     $(".btn-eliminar").on("click", (e) => {
       const productId = $(e.currentTarget).data("id");
+      let value = parseInt(localStorage.getItem("items"));
+      value--;
+      localStorage.setItem("items", value);
       eliminarProducto(productId);
     });
 
