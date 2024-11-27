@@ -12,68 +12,64 @@
     <script src="/src/pages/tienda/js/carro.js" type="module"></script>
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="/">
-          <img src="/public/club.png" alt="Logo" width="150" height="50" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse pe-5" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item active">
-              <a class="nav-link" style="letter-spacing: 2px" href="/"
-                >Inicio</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                style="letter-spacing: 2px"
-                href="/src/pages/tienda/index.html"
-                >Productos</a
-              >
-            </li>
-            <li class="nav-item active">
-              <a
-                class="nav-link"
-                style="letter-spacing: 2px"
-                href="/src/pages/contactanos/index.html"
-                >Contactanos</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                style="letter-spacing: 2px"
-                href="/src/pages/blog/index.html"
-                >Blog</a
-              >
-            </li>
-            <li class="nav-item active">
-              <a
-                href="/src/pages/carro/index.html"
-                id="tienda-item"
-                class="nav-link"
-                style="letter-spacing: 2px"
-              >
-                <img src="/public/car.png" style="width: 25px" />
-                <span class="badge text-bg-danger" id="item-count">0</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+    <nav id="nav" class="navbar navbar-expand-lg fixed-top">
+      <a class="navbar-brand" href="/">
+        <img src="/public/club.png" alt="Logo" width="150" height="50" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse pe-5" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item active">
+            <a class="nav-link" style="letter-spacing: 2px" href="/">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              style="letter-spacing: 2px"
+              href="/src/pages/tienda/index.html"
+              >Productos</a
+            >
+          </li>
+          <li class="nav-item active">
+            <a
+              class="nav-link"
+              style="letter-spacing: 2px"
+              href="/src/pages/contactanos/index.html"
+              >Contactanos</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              style="letter-spacing: 2px"
+              href="/src/pages/blog/index.html"
+              >Blog</a
+            >
+          </li>
+          <li class="nav-item active">
+            <a
+              href="/src/pages/carro/index.html"
+              id="tienda-item"
+              class="nav-link"
+              style="letter-spacing: 2px"
+            >
+              <img src="/public/car.png" style="width: 25px" />
+              <span class="badge text-bg-danger" id="item-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <main id="producto-info"></main>
     <div id="body"></div>
     <footer class="bg-dark text-white" style="padding: 20px 0">
@@ -124,5 +120,6 @@
       </div>
     </footer>
     <script src="/src/pages/productos/js/producto.js" type="module"></script>
+    <script src="../../js/nav.js" type="module"></script>
   </body>
 </html>
