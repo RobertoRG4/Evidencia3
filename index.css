@@ -2,6 +2,7 @@
   background: url("https://static.nike.com/a/images/t_prod/w_1920,c_limit,f_auto,q_auto/2eca5656-fc3c-4adc-894e-60febb7956c6/pdp.jpg")
     no-repeat fixed center;
   background-size: cover;
+  height: 100vh;
 }
 .button-class {
   background-color: #000;

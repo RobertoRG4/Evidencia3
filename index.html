@@ -5,78 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Evidencia 2</title>
     <link
-      href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/index.css" />
-    <script src="/src/js/index.js" type="module"></script>
-    <script src="/src/pages/tienda/js/carro.js" type="module"></script>
+    <script src="./src/js/index.js" type="module"></script>
+    <script src="./src/pages/tienda/js/carro.js" type="module"></script>
   </head>
   <body>
+    <nav id="nav" class="navbar navbar-expand-lg bg-transparent fixed-top">
+      <a class="navbar-brand" href="/">
+        <img src="./public/club.png" alt="Logo" width="150" height="50" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse pe-5" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item active">
+            <a class="nav-link" style="letter-spacing: 2px" href="/">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              style="letter-spacing: 2px"
+              href="/src/pages/tienda/index.html"
+              >Productos</a
+            >
+          </li>
+          <li class="nav-item active">
+            <a
+              class="nav-link"
+              style="letter-spacing: 2px"
+              href="/src/pages/contactanos/index.html"
+              >Contactanos</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              style="letter-spacing: 2px"
+              href="/src/pages/blog/index.html"
+              >Blog</a
+            >
+          </li>
+          <li class="nav-item active">
+            <a
+              href="/src/pages/carro/index.html"
+              id="tienda-item"
+              class="nav-link"
+              style="letter-spacing: 2px"
+            >
+              <img src="/public/car.png" style="width: 25px" />
+              <span class="badge text-bg-danger" id="item-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <main>
-      <section id="main" class="container-fluid height">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand" href="/">
-            <img src="/public/club.png" alt="Logo" width="150" height="50" />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse pe-5" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item active">
-                <a class="nav-link" style="letter-spacing: 2px" href="/"
-                  >Inicio</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  style="letter-spacing: 2px"
-                  href="/src/pages/tienda/index.html"
-                  >Productos</a
-                >
-              </li>
-              <li class="nav-item active">
-                <a
-                  class="nav-link"
-                  style="letter-spacing: 2px"
-                  href="/src/pages/contactanos/index.html"
-                  >Contactanos</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  style="letter-spacing: 2px"
-                  href="/src/pages/blog/index.html"
-                  >Blog</a
-                >
-              </li>
-              <li class="nav-item active">
-                <a
-                  href="/src/pages/carro/index.html"
-                  id="tienda-item"
-                  class="nav-link"
-                  style="letter-spacing: 2px"
-                >
-                  <img src="/public/car.png" style="width: 25px" />
-                  <span class="badge text-bg-danger" id="item-count">0</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <div class="mt">
-          <div class="h">
+      <section id="main" class="container-fluid">
+        <div>
+          <div class="container">
             <h1 class="text-white fw-bold ft-size">Tecnologia para tus pies</h1>
           </div>
           <div class="text-end mt">
@@ -129,12 +127,12 @@
               ¡Comparte tu experiencia aquí y sé parte de nuestra comunidad de
               corredores apasionados!
               <br />
-              <button
-                onclick="window.location.href = '/src/pages/blog/index.html'"
-                class="btn text-white p-3 button-class m-4"
+              <a
+                src="/src/pages/blog/index.html'"
+                class="btn bg-dark text-white p-3 button-class m-4"
               >
                 Visitar blog
-              </button>
+              </a>
             </p>
           </div>
           <div style="padding-left: 300px">
@@ -161,64 +159,65 @@
               ¡Tu opinión es clave para ayudarnos a mejorar y ofrecerte
               productos que realmente marquen la diferencia.!
               <br />
-              <button
-                onclick="window.location.href ='/src/pages/contactanos/index.html'"
-                class="btn text-white p-3 button-class m-4"
+              <a
+                src="/src/pages/contactanos/index.html'"
+                class="btn bg-dark text-white p-3 button-class m-4 z-0"
               >
                 Compartir mi opinion
-              </button>
+              </a>
             </p>
           </div>
         </div>
       </section>
-      <footer class="bg-dark text-white" style="padding: 20px 0">
-        <div class="container">
-          <div class="row justify-content-between align-items-center">
-            <div class="col-md-6">
-              <ul class="navbar-nav d-flex flex-row">
-                <li class="nav-item me-4">
-                  <a
-                    class="nav-link text-white"
-                    style="letter-spacing: 2px"
-                    href="/"
-                    >Inicio</a
-                  >
-                </li>
-                <li class="nav-item me-4">
-                  <a
-                    class="nav-link text-white"
-                    style="letter-spacing: 2px"
-                    href="/src/pages/tienda/index.html"
-                    >Productos</a
-                  >
-                </li>
-                <li class="nav-item me-4">
-                  <a
-                    class="nav-link text-white"
-                    style="letter-spacing: 2px"
-                    href="/src/pages/contactanos/index.html"
-                    >Contáctanos</a
-                  >
-                </li>
-                <li class="nav-item me-4">
-                  <a
-                    class="nav-link text-white"
-                    style="letter-spacing: 2px"
-                    href="/src/pages/blog/index.html"
-                    >Blog</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-6 text-end">
-              <p style="margin: 0; letter-spacing: 1px">
-                Todos los derechos reservados
-              </p>
-            </div>
+    </main>
+    <footer class="bg-dark text-white" style="padding: 20px 0">
+      <div class="container">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-md-6">
+            <ul class="navbar-nav d-flex flex-row">
+              <li class="nav-item me-4">
+                <a
+                  class="nav-link text-white"
+                  style="letter-spacing: 2px"
+                  href="/"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item me-4">
+                <a
+                  class="nav-link text-white"
+                  style="letter-spacing: 2px"
+                  href="/src/pages/tienda/index.html"
+                  >Productos</a
+                >
+              </li>
+              <li class="nav-item me-4">
+                <a
+                  class="nav-link text-white"
+                  style="letter-spacing: 2px"
+                  href="/src/pages/contactanos/index.html"
+                  >Contáctanos</a
+                >
+              </li>
+              <li class="nav-item me-4">
+                <a
+                  class="nav-link text-white"
+                  style="letter-spacing: 2px"
+                  href="/src/pages/blog/index.html"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 text-end">
+            <p style="margin: 0; letter-spacing: 1px">
+              Todos los derechos reservados
+            </p>
           </div>
         </div>
-      </footer>
-    </main>
+      </div>
+    </footer>
     <script src="/src/js/main.js" type="module"></script>
+    <script src="./src/js/nav.js" type="module"></script>
   </body>
 </html>
