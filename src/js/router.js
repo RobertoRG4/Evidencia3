@@ -24,6 +24,9 @@ const routes = {
       "/src/pages/tienda/js/carro.js",
     ],
   },
+  "/admin": {
+    page: "/admin/index.html",
+  },
   "*": {
     page: "/src/pages/not-found/index.html",
     scripts: [],
@@ -45,7 +48,7 @@ async function loadContent(path) {
 
 function loadScripts(scripts) {
   const existingScripts = document.querySelectorAll(
-    'script[data-loaded="true"]'
+    'script[data-loaded="true"]',
   );
   existingScripts.forEach((script) => script.remove());
 
