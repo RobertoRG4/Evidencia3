@@ -1,7 +1,7 @@
 import { productos } from "@/data/informacion.js";
 import $ from "jquery";
 import "bootstrap";
-console.log("cargando..");
+
 $(document).ready(() => {
   let cardsHtml = "";
   productos.forEach((item, index) => {
