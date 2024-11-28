@@ -31,3 +31,9 @@
 .h {
   height: 200px;
 }
+#page404 {
+  height: 100vh;
+}
+.h-100vh {
+  height: 80vh;
+}
