@@ -12,6 +12,7 @@ const routes = {
   },
   "/blog": {
     page: "src/pages/blog/index.html",
+    scripts: ["/src/pages/blog/js/audio.js"],
   },
   "/contactanos": {
     page: "/src/pages/contactanos/index.html",
