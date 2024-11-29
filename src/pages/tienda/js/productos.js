@@ -1,4 +1,4 @@
-import { productos } from "@/data/informacion.js";
+import { productos } from "../data/informacion.js";
 import $ from "jquery";
 import "bootstrap";
 

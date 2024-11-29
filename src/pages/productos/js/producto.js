@@ -1,7 +1,7 @@
 import $ from "jquery";
 import "bootstrap";
 import * as bootstrap from "bootstrap";
-import { productos } from "@/data/informacion";
+import { productos } from "../data/informacion.js";
 
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get("id");
