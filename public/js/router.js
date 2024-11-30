@@ -1,35 +1,35 @@
 const routes = {
   "/": {
-    page: "/src/pages/inicio/index.html",
-    scripts: ["/src/js/main.js"],
+    page: "./public/pages/inicio/index.html",
+    scripts: ["./public/js/main.js"],
   },
   "/tienda": {
-    page: "/src/pages/tienda/index.html",
+    page: "./public/pages/tienda/index.html",
     scripts: [
-      "/src/pages/tienda/js/carro.js",
-      "/src/pages/tienda/js/productos.js",
+      "./public/pages/tienda/js/carro.js",
+      "./public/pages/tienda/js/productos.js",
     ],
   },
   "/blog": {
-    page: "src/pages/blog/index.html",
-    scripts: ["/src/pages/blog/js/audio.js"],
+    page: "./public/pages/blog/index.html",
+    scripts: ["./public/pages/blog/js/audio.js"],
   },
   "/contactanos": {
-    page: "/src/pages/contactanos/index.html",
-    scripts: ["/src/js/index.js"],
+    page: "./public/pages/contactanos/index.html",
+    scripts: ["./public/js/index.js"],
   },
   "/carro": {
-    page: "/src/pages/carro/index.html",
+    page: "./public/pages/carro/index.html",
     scripts: [
-      "/src/pages/carro/js/render-productos.js",
-      "/src/pages/tienda/js/carro.js",
+      "./public/pages/carro/js/render-productos.js",
+      "./public/pages/tienda/js/carro.js",
     ],
   },
   "/admin": {
-    page: "/admin/index.html",
+    page: "./admin/index.html",
   },
   "*": {
-    page: "/src/pages/not-found/index.html",
+    page: "./public/pages/not-found/index.html",
     scripts: [],
   },
 };
@@ -49,7 +49,7 @@ async function loadContent(path) {
 
 function loadScripts(scripts) {
   const existingScripts = document.querySelectorAll(
-    'script[data-loaded="true"]',
+    'script[data-loaded="true"]'
   );
   existingScripts.forEach((script) => script.remove());
 

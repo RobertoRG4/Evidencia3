@@ -1,7 +1,7 @@
 import $ from "jquery";
 import "bootstrap";
 import * as bootstrap from "bootstrap";
-import { productos } from "../data/informacion.js";
+import { productos } from "../../../../src/informacion";
 
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get("id");
@@ -89,7 +89,7 @@ if (producto) {
                 </div>
                 <div class="row mt-5 d-flex align-items-center justify-content-center">
                     <div class="col-4">
-                        <a href="/src/pages/productos/comprar/index.html" class="btn btn-dark w-100">Comprar</a>
+                        <a href="/public/pages/productos/comprar/index.html" class="btn btn-dark w-100">Comprar</a>
                     </div>
                     <div class="col-4">
                         <button class="btn bg-dark text-white w-100" >Agregar al carro</button>

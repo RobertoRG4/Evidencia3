@@ -1,4 +1,4 @@
-import { dataHome } from "../data/informacion";
+import { dataHome } from "../../src/informacion";
 import $ from "jquery";
 import "bootstrap";
 $(document).ready(() => {
